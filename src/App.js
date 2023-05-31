@@ -1,19 +1,20 @@
 import './App.css';
 import NavBarComponent from './components/NavBarComponent';
-import ProductCardHolder from './components/ProductCardHolder'
+import ProductCatalog from './components/ProductCatalog'
 import ShoppingCart from './components/ShoppingCart'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { AppContextProvider } from './components/AppContext';
+
+import { Routes, Route } from 'react-router-dom' 
 
 function App() {
   
   return (
     <>
-      <AppContextProvider>
-        <NavBarComponent />
-        <ProductCardHolder />
-        <ShoppingCart />
-      </AppContextProvider>
+      <NavBarComponent />
+      <Routes>
+        <Route path="/product-catalog" element={<ProductCatalog/>} />
+        <Route path="/shopping-cart" element={<ShoppingCart />} /> 
+      </Routes>
     </>
 
   );

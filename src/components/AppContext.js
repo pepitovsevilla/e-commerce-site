@@ -19,17 +19,39 @@ export const AppContextProvider = ({ children }) => {
       fetchProducts();
     }, []);
   
-    const [cart, setCart] = useState([]);
-  
+    const [cart, setCart] = useState({});
+
+
     const addToCart = (newItem) => {
-      let updatedItems = [...cart, newItem];
-      setCart(updatedItems);
-    };
+      alert("Item added to cart")
+      let updatedItems = {...cart};
+      if (newItem.id in updatedItems) {
+        updatedItems[`${newItem.id}`]++
+      } else {
+        updatedItems[`${newItem.id}`] = 1;
+      }
+      setCart(updatedItems)
+    }
+
+    const removeFromCart = (keyToRemove) => {
+      let updatedItems = {...cart};
+      delete updatedItems[keyToRemove];
+      setCart(updatedItems)
+
+    }
+
+    // const increaseQuanity = () => {
+    //   return
+    // }
+
+    // const decreaseQuanity = () => {
+    //   return
+    // }
   
     useEffect(() => {
       console.log(cart);
     }, [cart]);
   
-    return <AppContext.Provider value={{ cart, setCart, products, setProducts, addToCart }}>{children}</AppContext.Provider>;
+    return <AppContext.Provider value={{ cart, setCart, products, setProducts, addToCart, removeFromCart }}>{children}</AppContext.Provider>;
   };
   

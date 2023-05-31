@@ -8,7 +8,7 @@ import '../index.css';
 import { AppContext } from './AppContext';
 
 
-export default function ProductCardHolder() {
+export default function ProductCatalog() {
   const {products, addToCart} = useContext(AppContext);
   return (
     <Container fluid className="product-card-container">
