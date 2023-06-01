@@ -17,6 +17,7 @@ export default function ProductCatalog() {
           <Col key={index}>
             <div className="product-card-wrapper">
               <ProductCard
+                category={product.category.replace(/[^\w\s]/gi, "").replace(/\s+/g, "")}
                 image={product.image}
                 title={product.title}
                 price={product.price}

@@ -9,7 +9,7 @@ import CartItem from './CartItem';
 
 
 export default function ShoppingCart() {
-  const {cart, products, removeFromCart} = useContext(AppContext);
+  const {cart, products, removeFromCart, total} = useContext(AppContext);
 
   let cartItemKeys = Object.keys(cart);
   let cartItems = [];
@@ -43,6 +43,7 @@ export default function ShoppingCart() {
         ))}
       </Row>
     </Container>
+    <h1>Total Amount {total}</h1>
     </>
     
   );
