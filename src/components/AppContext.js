@@ -24,7 +24,6 @@ export const AppContextProvider = ({ children }) => {
 
 
     const addToCart = (newItem) => {
-      alert("Item added to cart")
       let updatedItems = {...cart};
       if (newItem.id in updatedItems) {
         updatedItems[`${newItem.id}`]++
@@ -64,9 +63,9 @@ export const AppContextProvider = ({ children }) => {
       computeTotal();
     }, [cart]);
 
-    useEffect(() => {
-      console.log(cart);
-    }, [cart]);
+    // useEffect(() => {
+    //   console.log(cart);
+    // }, [cart]);
   
     return <AppContext.Provider value={{ cart, setCart, products, setProducts, addToCart, removeFromCart, total }}>{children}</AppContext.Provider>;
   };

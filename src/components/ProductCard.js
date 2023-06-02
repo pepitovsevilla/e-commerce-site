@@ -14,8 +14,9 @@ export default function ProductCard({ image, title, price, rating, addToCart, ca
         <Card.Title>{title}</Card.Title>
         <Card.Text>Price: ${price}</Card.Text>
         <Card.Text>Rating: {rating}</Card.Text>
-        <Card.Text>Rating: {category}</Card.Text>
-        <Button onClick={addToCart}>Add to Cart</Button>
+        <div className="d-grid gap-2">
+          <Button variant="dark" onClick={addToCart}>Add to Cart</Button>
+      </div>
       </Card.Body>
     </Card>
   );
