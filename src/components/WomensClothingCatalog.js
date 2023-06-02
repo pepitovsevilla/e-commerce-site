@@ -10,7 +10,7 @@ import { AppContext } from './AppContext';
 export default function WomensClothingCatalog() {
   const { products, addToCart } = useContext(AppContext);
   return (
-    <Container fluid className="product-card-container">
+    <Container fluid="lg" className="product-card-container d-flex justify-content-center">
       <Row xs={1} md={2} lg={3} xl={4} className="gx-3 gy-3">
         {products.map((product, index) => {
           if (product.category.replace(/[^\w\s]/gi, "").replace(/\s+/g, "") === 'womensclothing') {
