@@ -18,7 +18,7 @@ export default function NavBarComponent() {
   return (
     <Navbar className="navbar-nav" bg="dark" variant="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="/">PVS E-COMMERCE</Navbar.Brand>
+        <Navbar.Brand href="/e-commerce-site/">PVS E-COMMERCE</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
