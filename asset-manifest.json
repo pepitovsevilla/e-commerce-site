@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/pepitovsevilla/e-commerce-site/static/css/main.9f97b971.css",
-    "main.js": "/pepitovsevilla/e-commerce-site/static/js/main.452d5f53.js",
-    "static/js/787.4d35a8bf.chunk.js": "/pepitovsevilla/e-commerce-site/static/js/787.4d35a8bf.chunk.js",
-    "static/media/mens-clothes.jpg": "/pepitovsevilla/e-commerce-site/static/media/mens-clothes.0ddb33a68894d20f65b8.jpg",
-    "static/media/womens-clothes.jpg": "/pepitovsevilla/e-commerce-site/static/media/womens-clothes.0334e489d466b83c0004.jpg",
-    "static/media/jewelry.jpg": "/pepitovsevilla/e-commerce-site/static/media/jewelry.f121da31ba1b7bc0eeb7.jpg",
-    "static/media/gadgets.jpg": "/pepitovsevilla/e-commerce-site/static/media/gadgets.8331ee18fdaa21d72e19.jpg",
-    "static/media/emptyCartImage.png": "/pepitovsevilla/e-commerce-site/static/media/emptyCartImage.49d7ad2b13360e514657.png",
-    "index.html": "/pepitovsevilla/e-commerce-site/index.html",
-    "main.9f97b971.css.map": "/pepitovsevilla/e-commerce-site/static/css/main.9f97b971.css.map",
-    "main.452d5f53.js.map": "/pepitovsevilla/e-commerce-site/static/js/main.452d5f53.js.map",
-    "787.4d35a8bf.chunk.js.map": "/pepitovsevilla/e-commerce-site/static/js/787.4d35a8bf.chunk.js.map"
+    "main.css": "/e-commerce-site/static/css/main.9f97b971.css",
+    "main.js": "/e-commerce-site/static/js/main.9f50625d.js",
+    "static/js/787.4d35a8bf.chunk.js": "/e-commerce-site/static/js/787.4d35a8bf.chunk.js",
+    "static/media/mens-clothes.jpg": "/e-commerce-site/static/media/mens-clothes.0ddb33a68894d20f65b8.jpg",
+    "static/media/womens-clothes.jpg": "/e-commerce-site/static/media/womens-clothes.0334e489d466b83c0004.jpg",
+    "static/media/jewelry.jpg": "/e-commerce-site/static/media/jewelry.f121da31ba1b7bc0eeb7.jpg",
+    "static/media/gadgets.jpg": "/e-commerce-site/static/media/gadgets.8331ee18fdaa21d72e19.jpg",
+    "static/media/emptyCartImage.png": "/e-commerce-site/static/media/emptyCartImage.49d7ad2b13360e514657.png",
+    "index.html": "/e-commerce-site/index.html",
+    "main.9f97b971.css.map": "/e-commerce-site/static/css/main.9f97b971.css.map",
+    "main.9f50625d.js.map": "/e-commerce-site/static/js/main.9f50625d.js.map",
+    "787.4d35a8bf.chunk.js.map": "/e-commerce-site/static/js/787.4d35a8bf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9f97b971.css",
-    "static/js/main.452d5f53.js"
+    "static/js/main.9f50625d.js"
   ]
 }
