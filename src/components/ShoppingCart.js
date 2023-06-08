@@ -8,8 +8,11 @@ import { AppContext } from './AppContext';
 import CartItem from './CartItem';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom' 
-import emptyCartImage from '../emptyCartImage.png';
+import emptyCartImage from '../images/emptyCartImage.png';
 import Image from 'react-bootstrap/Image';
+import Stack from 'react-bootstrap/Stack'
+import Alert from 'react-bootstrap/Alert';
+
 
 
 export default function ShoppingCart() {
@@ -43,29 +46,33 @@ export default function ShoppingCart() {
   return (
     <>
       <br></br>
-      <h1>SHOPPING CART</h1>
-      <Container fluid>
-        <Row xs={1} md={2} lg={3} xl={4} className="gx-3 gy-3">
-          {cartItems.map((item, index) => (
-            <Col key={index}>
-              <div className="product-card-wrapper">
-                <CartItem
-                  id={item.id}
-                  image={item.image}
-                  title={item.title}
-                  price={item.price}
-                  rating={item.rating.rate}
-                  quantity={cart[item.id]}
-                  removeFromCart={() => {
-                    removeFromCart(item.id);
-                  }}
-                />
-              </div>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-      <h1>Total Amount {total}</h1>
+      <Stack gap={3}>
+        <Container fluid>
+          <h1>My Shopping Cart</h1>
+          <Stack gap={2}>
+            {cartItems.map((item, index) => (
+              <Row key={index}>
+                <div className="product-card-wrapper">
+                  <CartItem
+                    id={item.id}
+                    image={item.image}
+                    title={item.title}
+                    price={item.price}
+                    rating={item.rating.rate}
+                    quantity={cart[item.id]}
+                    removeFromCart={() => {
+                      removeFromCart(item.id);
+                    }}
+                  />
+                </div>
+              </Row>
+            ))}
+          </Stack> 
+        </Container>
+        <Alert className="text-right" variant="primary">
+          Total Amount: ${total.toFixed(2)}
+        </Alert>
+      </Stack>
     </>
   );
 }

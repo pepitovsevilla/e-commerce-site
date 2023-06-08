@@ -18,7 +18,7 @@ function App() {
     <>
       <NavBarComponent />
       <Routes>
-        <Route path="/product-catalog" element={<ProductCatalog/>} />
+        <Route path="/" element={<ProductCatalog/>} />
         <Route path="/womens-clothing" element={<WomensClothingCatalog/>} />
         <Route path="/mens-clothing" element={<MensClothingCatalog/>} />
         <Route path="/electronics" element={<ElectronicsCatalog/>} />

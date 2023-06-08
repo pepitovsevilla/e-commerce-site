@@ -6,31 +6,35 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import '../index.css';
 import { AppContext } from './AppContext';
+import Stack from 'react-bootstrap/Stack';
 
 export default function MensClothingCatalog() {
   const { products, addToCart } = useContext(AppContext);
   return (
     <Container fluid="lg" className="product-card-container d-flex justify-content-center">
-      <Row xs={1} md={2} lg={3} xl={4} className="gx-3 gy-3">
-        {products.map((product, index) => {
-          if (product.category.replace(/[^\w\s]/gi, "").replace(/\s+/g, "") === 'mensclothing') {
-            return (
-              <Col key={index}>
-                <div className="product-card-wrapper">
-                  <ProductCard
-                    image={product.image}
-                    title={product.title}
-                    price={product.price}
-                    rating={product.rating.rate}
-                    addToCart={() => { addToCart(product) }}
-                  />
-                </div>
-              </Col>
-            );
-          }
-          return null;
-        })}
-      </Row>
-    </Container>
+      <Stack gap={3}>
+        <h1>Men's Fashion</h1>
+        <Row xs={1} md={2} lg={3} xl={4} className="gx-3 gy-3">
+          {products.map((product, index) => {
+            if (product.category.replace(/[^\w\s]/gi, "").replace(/\s+/g, "") === 'mensclothing') {
+              return (
+                <Col key={index}>
+                  <div className="product-card-wrapper">
+                    <ProductCard
+                      image={product.image}
+                      title={product.title}
+                      price={product.price}
+                      rating={product.rating.rate}
+                      addToCart={() => { addToCart(product) }}
+                    />
+                  </div>
+                </Col>
+              );
+            }
+            return null;
+          })}
+        </Row>
+      </Stack>
+    </Container>    
   );
 }
